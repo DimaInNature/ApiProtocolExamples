@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC.Receiver.Presentation";
+
+package calculator;
+
+service Calculator {
+  rpc Sum (CalculateSumRequest) returns (CalculateSumReply);
+}
+
+message CalculateSumRequest {
+  int32 number = 1;
+  int32 number2 = 2;
+}
+
+message CalculateSumReply {
+  int32 result = 1;
+}
